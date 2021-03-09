@@ -1,0 +1,93 @@
+//Exo1//
+
+$main-color: rgb(231, 215, 148);
+$secondary-color: rgb(6, 143, 118);
+$third-color: rgb(121, 170, 111);
+
+body{
+  background-color: $main-color;
+
+  .titre{
+    background-color: $secondary-color;
+  }
+
+  .corps{
+    background-color: $third-color;
+  }
+}
+
+//Exo2//
+
+@mixin title {
+  font-size: 4em;
+  font-family: sans-serif;
+  color: red;
+}
+
+@mixin paragraph {
+  font-size: 2em;
+  font-family: serif;
+  color: blue;
+}
+
+h1 , h3, h4{
+  @include title;
+}
+
+p{
+  @include paragraph;
+}
+
+//Exo3//
+
+@mixin li {
+  color: yellow;
+  text-decoration: underline;
+
+}
+
+li{
+  @include li;
+}
+
+//Exo4//
+
+@mixin blabla {
+  background-color: purple;
+  font-family: fantasy;
+  color: yellow;
+  font-size: 2em;
+ }
+/*
+.blabla{
+  @include blabla;
+
+  p{
+    text-decoration: underline;
+  }
+}
+*/
+//ou creer une class fantome qui n'existe pas dans l'index//
+.fantome{
+  text-decoration: underline;
+}
+.blabla{
+  @include blabla;
+  @extend .fantome;
+}
+
+//Exo5//
+
+@mixin exo5 {
+  text-decoration: underline;
+  color: pink;
+}
+
+.exo5{
+  @include exo5;
+
+  &:hover{
+    background-color: green;
+  }
+
+}

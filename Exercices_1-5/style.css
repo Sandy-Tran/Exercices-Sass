@@ -1,0 +1,56 @@
+body {
+  background-color: #e7d794;
+}
+body .titre {
+  background-color: #068f76;
+}
+body .corps {
+  background-color: #79aa6f;
+}
+
+h1, h3, h4 {
+  font-size: 4em;
+  font-family: sans-serif;
+  color: red;
+}
+
+p {
+  font-size: 2em;
+  font-family: serif;
+  color: blue;
+}
+
+li {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/*
+.blabla{
+  @include blabla;
+
+  p{
+    text-decoration: underline;
+  }
+}
+*/
+.fantome, .blabla {
+  text-decoration: underline;
+}
+
+.blabla {
+  background-color: purple;
+  font-family: fantasy;
+  color: yellow;
+  font-size: 2em;
+}
+
+.exo5 {
+  text-decoration: underline;
+  color: pink;
+}
+.exo5:hover {
+  background-color: green;
+}
+
+/*# sourceMappingURL=style.css.map */
